@@ -44,7 +44,7 @@ Telegram::Bot::Client.run(token) do |bot|
                 begin
                     reply = %x(#{message.text})
                 rescue => error
-                    reply = error
+                    reply = error.message
                 end
             end
         end
